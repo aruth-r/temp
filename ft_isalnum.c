@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aruth-ra <aruth-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 14:13:52 by aruth-ra          #+#    #+#             */
-/*   Updated: 2021/05/22 15:55:07 by aruth-ra         ###   ########.fr       */
+/*   Created: 2021/05/19 15:59:24 by aruth-ra          #+#    #+#             */
+/*   Updated: 2021/05/19 16:03:58 by aruth-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+int	ft_isalnum(int c)
 {
-	char *dest;
-	size_t n;
-
-	n = ft_strlen(dst);
-	dest = dst + n;
-	n = dstsize - n -1;
-	ft_memcpy((void*)dest, (void *)src, n);
-	n = ft_strlen(dst);
-	dst[n] = 0;
-	return (n);
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	else
+		return (0);
 }

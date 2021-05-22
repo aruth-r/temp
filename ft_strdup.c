@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aruth-ra <aruth-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 14:13:52 by aruth-ra          #+#    #+#             */
-/*   Updated: 2021/05/22 15:55:07 by aruth-ra         ###   ########.fr       */
+/*   Created: 2021/05/19 17:24:48 by aruth-ra          #+#    #+#             */
+/*   Updated: 2021/05/19 18:05:09 by aruth-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strdup(const char *s)
 {
-	char *dest;
-	size_t n;
+	char	*dest;
+	int		src_len;
 
-	n = ft_strlen(dst);
-	dest = dst + n;
-	n = dstsize - n -1;
-	ft_memcpy((void*)dest, (void *)src, n);
-	n = ft_strlen(dst);
-	dst[n] = 0;
-	return (n);
+	src_len = ft_strlen(s);
+	dest = (char *)malloc(sizeof(char) * (src_len + 1));
+	if (dest == 0)
+		return (0);
+	else
+		ft_strlcpy(dest, s, src_len + 1);
+	return (dest);
 }
