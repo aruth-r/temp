@@ -6,7 +6,7 @@
 /*   By: aruth-ra <aruth-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 13:06:01 by aruth-ra          #+#    #+#             */
-/*   Updated: 2021/05/22 15:52:56 by aruth-ra         ###   ########.fr       */
+/*   Updated: 2021/05/22 16:07:42 by aruth-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,7 @@ int main ()
 	printf("t = %ld \n", t);
 	t = strlen(dest);
 	printf("t = %ld \n", t);
-	t = ft_strlcat(dest, str, 60);
+	t = strlcat(dest, str, 60);
 	puts(dest);
 	printf("t = %ld \n", t);
 
