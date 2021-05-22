@@ -6,7 +6,7 @@
 /*   By: aruth-ra <aruth-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 13:06:01 by aruth-ra          #+#    #+#             */
-/*   Updated: 2021/05/22 16:41:44 by aruth-ra         ###   ########.fr       */
+/*   Updated: 2021/05/22 16:47:48 by aruth-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,7 +130,7 @@ int main ()
 	puts(dest);
 	printf("t = %ld \n", t);*/
 	puts(str);
-	char *a = ft_strchr(s, 's');
+	char *a = strchr(s, 's');
 	printf("a aponta para: %c \n", *a);
 	printf("Endereço de s: %p \nEndereço de a: %p \n", s, a);
 	return(0);
