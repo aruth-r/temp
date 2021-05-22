@@ -6,7 +6,7 @@
 /*   By: aruth-ra <aruth-ra@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 13:06:01 by aruth-ra          #+#    #+#             */
-/*   Updated: 2021/05/22 15:59:25 by aruth-ra         ###   ########.fr       */
+/*   Updated: 2021/05/22 16:41:44 by aruth-ra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ int main ()
 {
 	char str[60];
 	char dest[60];
-	//char *s;
+	char *s;
 	//char *d;
 	//size_t len;
 
-	//s = &(*str);
+	s = &(*str);
 	strcpy(str,"This is string.h library function");
 	strcpy(dest,"This is string dest");
 	//d = ft_strdup(s);
@@ -120,7 +120,7 @@ int main ()
 	printf("memcmp: \n x = %d \n", x);
 	printf("y = %d \n", y);
 	printf("z = %d \n", z);
-	printf("w = %d \n", w);*/
+	printf("w = %d \n", w);
 
 	size_t  t = strlen(str);
 	printf("t = %ld \n", t);
@@ -128,7 +128,10 @@ int main ()
 	printf("t = %ld \n", t);
 	t = ft_strlcat(dest, str, 60);
 	puts(dest);
-	printf("t = %ld \n", t);
-
+	printf("t = %ld \n", t);*/
+	puts(str);
+	char *a = ft_strchr(s, 's');
+	printf("a aponta para: %c \n", *a);
+	printf("Endereço de s: %p \nEndereço de a: %p \n", s, a);
 	return(0);
 }
